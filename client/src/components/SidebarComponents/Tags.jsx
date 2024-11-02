@@ -8,13 +8,11 @@ export default function Tags() {
         <div className="sidebar-tags">
             <p id="title-tags">Tags</p>
             <div>
-                {tags.map(x => (
-                    <>
-                    <a href>{x}</a>
-                    </>
-                ))
-                    
-                }
+            {tags.map((x, index) => (
+                <a key={index} href={x}>
+                {x}
+                </a>
+            ))}
             </div>
         </div>
         </>

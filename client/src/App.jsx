@@ -9,6 +9,7 @@ import Footer from './components/Footer.jsx';
 
 //? Pages
 import Home from './pages/Home.jsx';
+import Posts from './pages/Posts/Posts.jsx';
 import Admin from './pages/Admin.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Cookies from './pages/CookieDeclaration.jsx';
@@ -33,7 +34,7 @@ function App() {
   }
   useEffect(() => {
     console.log(location.pathname)
-  })
+  }, [location])
 
   return (
     <div className="App">
@@ -47,6 +48,7 @@ function App() {
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/cookies' element={<Cookies />} />
               <Route path='/sitemap.xml' element={<Admin />} />
+              <Route path='/post/:postUrl' element={<Posts />} />
           </Routes>
           </div>
         </main>
