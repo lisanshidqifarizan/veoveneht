@@ -8,6 +8,8 @@ const Posts = () => {
     const post = data.flatMap(user => user.post).find(post => post.link === `/${postUrl}`);
     const author = data.find(user => user.post.includes(post))?.name;
 
+    fetch('')
+
     return (
         <>
         <Helmet title={`${post.title} | VEO Veneht`} />
